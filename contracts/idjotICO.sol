@@ -1,7 +1,6 @@
 pragma solidity >= 0.7.0 < 0.9.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "hardhat/console.sol";
 
 // if ico fails there owner's will get 95% of their ether back since 5% will be charges including gas fees and ICO processing fees
 contract idjotICO is ERC20 {
@@ -19,16 +18,14 @@ contract idjotICO is ERC20 {
     uint256 public tokenPrice = 1000000000000000;
 
     // 300 ether to find if ICO was a success or not
-    // uint256 public hardCap = 300000000000000000000;
-    uint256 public hardCap = 8000000000000000000;
+    uint256 public hardCap = 300000000000000000000;
 
     uint256 public raisedAmount;
 
     // ICO sale starts immediately as the contract is deployed
     uint256 public saleStart = block.timestamp;
     // ICO sale ends after one week
-    // uint256 public saleEnd = block.timestamp + 604800;
-    uint256 public saleEnd = block.timestamp + 120; 
+    uint256 public saleEnd = block.timestamp + 604800;
 
     // max investment is 5 ether
     uint256 public maxInvestment = 5000000000000000000;
