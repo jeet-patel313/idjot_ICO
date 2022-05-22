@@ -1,6 +1,7 @@
 pragma solidity >= 0.7.0 < 0.9.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "hardhat/console.sol";
 
 // if ico fails there owner's will get 95% of their ether back since 5% will be charges including gas fees and ICO processing fees
 contract idjotICO is ERC20 {
@@ -85,10 +86,16 @@ contract idjotICO is ERC20 {
 
     // investing function
     function invest() public payable returns(bool) {
+        
         icoState = getCurrentICOState();
         // investment only possible if IcoState is running
         require(icoState == IcoState.running, "idjotICO is not in running state");
 
+        
+        // address must not have invested previously
+        
+        require(idjotBalance[msg.sender] == 0, "User must invest only once according to our policy");
+                
         require(msg.value >= minInvestment && msg.value <= maxInvestment, "Investment amount must be more than 0.05 ETH and less than 5 ETH");
 
         uint256 tokens = msg.value / tokenPrice;
@@ -102,8 +109,8 @@ contract idjotICO is ERC20 {
         idjotBalance[admin] -= tokens;
 
         investedAmt[msg.sender] += msg.value;
-
-        return true;
+        
+        return true;          
     }
 
     // function to check if the ico was a success
