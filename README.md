@@ -1,7 +1,11 @@
 # IdjotICO - - An Ethereum-based Crowdfunding Platform
 
 ```
-This code defines a smart contract for an Initial Coin Offering (ICO) of a token named "IdjotICO" with the symbol "WIN". The contract is written in the Solidity programming language and is compatible with the Ethereum Virtual Machine (EVM). The contract implements the ERC20 token standard, which is a widely-used standard for creating tokens on the Ethereum network.
+This code defines a smart contract for an Initial Coin Offering (ICO) <br>
+of a token named "IdjotICO" with the symbol "WIN". The contract is written <br>
+in the Solidity programming language and is compatible with the  <br>
+Ethereum Virtual Machine (EVM). The contract implements the ERC20 token standard, <br>
+which is a widely-used standard for creating tokens on the Ethereum network. <br>
 
 The contract allows users to invest in the ICO by sending Ether to the contract. The investment amount must be between 0.05 and 5 Ether. The ICO has a hard cap of 8.22 million Ether, beyond which no more investments will be accepted. The ICO has a time limit of one week from the start of the sale.
 
