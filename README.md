@@ -16,5 +16,5 @@
 
 ### Let's build something new?
 
-- Connect with me on LinkedIn:
-  [Let's Build](https://www.linkedin.com/in/idjot/)
+- Let's build something innovative:
+  [Connect with me here](https://www.linkedin.com/in/idjot/)
