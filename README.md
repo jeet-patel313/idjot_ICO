@@ -1,4 +1,4 @@
-# IdjotICO - - An Ethereum-based Crowdfunding Platform
+# IdjotICO : An Ethereum-based Crowdfunding Platform
 
 - This code defines a smart contract for an Initial Coin Offering (ICO) <br>
   of a token named "IdjotICO" with the symbol "WIN". The contract is written <br>
